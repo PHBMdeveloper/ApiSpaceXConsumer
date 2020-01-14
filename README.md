@@ -52,7 +52,7 @@ Em seguida, inicio um app Django chamado `api` no qual é encontrado a regra de 
 - `admin.py` 
 - `models.py`
 
-Na pasta `core` encontramos os arquivos utilizados pelo Django Rest Framework, exponho a api:
+Na pasta `core` encontramos os arquivos utilizados pelo Django Rest Framework, expondo a api:
 
 `Pasta => api => core`
 - `serializers.py` 
