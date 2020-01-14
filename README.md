@@ -33,7 +33,7 @@ Elaborar uma API em Python/Django com front-end que consuma a API da SpaceX e se
 2. Entre na pasta `cd ApiSpaceXConsumer`;
 3. Rode `python -m venv venv` para criar a Virtual Environment;
 4. Rode `\env\Scripts\activate` para ativar a Virtual Environment;
-5. Rode `pip install requirements-dev.txt` para instalar as dependências;
+5. Rode `pip install -r requirements-dev.txt` para instalar as dependências;
 6. Rode `python manage.py migrate` para fazer as migrações;
 8. Rode `python manage.py createsuperuser` escolha um nome de usuário e senha;
 7. Rode `python manage.py runserver` para subir o servidor de desenvolvimento;
