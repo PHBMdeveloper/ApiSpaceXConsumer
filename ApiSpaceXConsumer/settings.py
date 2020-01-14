@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['127.0.0.1:8000', 'api-spacex-consumer.herokuapp.com']
+ALLOWED_HOSTS = ['api-spacex-consumer.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'import_export',
     'api',
-    
+
 ]
 
 MIDDLEWARE = [
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'ApiSpaceXConsumer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR,os.path.join(BASE_DIR, 'Templates')],
+        'DIRS': [BASE_DIR, os.path.join(BASE_DIR, 'Templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,7 +80,8 @@ WSGI_APPLICATION = 'ApiSpaceXConsumer.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-DATABASES = { 'default': config('DATABASE_URL', default=default_dburl, cast=dburl), }
+DATABASES = {'default': config(
+    'DATABASE_URL', default=default_dburl, cast=dburl), }
 
 # DATABASES = {
 #     'default': {
@@ -122,20 +123,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
-
-STATIC_URL = '/static/'
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-
-REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 1
-}
-
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 
@@ -144,3 +131,15 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     )
 }
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 1
+}
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.0/howto/static-files/
+
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
