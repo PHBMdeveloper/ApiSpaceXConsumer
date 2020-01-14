@@ -9,6 +9,11 @@ Elaborar uma API em Python/Django com front-end que consuma a API da SpaceX e se
 - Próximos Lançamentos
 - Lançamentos Passados
 
+## 👨🏼‍💻 Deploy no Heroku
+**webapi**
+[https://api-spacex-consumer.herokuapp.com/](https://api-spacex-consumer.herokuapp.com/)
+
+
 ## 👨🏼‍💻 Desenvolvedor
 
 - [Paulo Henrique Bernardes Martins](http://phdeveloper.com.br/)
@@ -35,18 +40,18 @@ Elaborar uma API em Python/Django com front-end que consuma a API da SpaceX e se
 
 ## 📚 Implementação
 
-Eu criei um projeto django chamado ApiSpaceXConsumer onde ficam as configurações básica do projeto:
+O projeto Django chamado ApiSpaceXConsumer é o local onde ficam as configurações básicas do projeto:
 `Pasta => ApiSpaceXConsumer `
 - `urls.py`
 - `settings.py`
 
-Em seguida eu inicio um app django chamado `api` onde se encontra a regra de negocio da api consumer:
+Em seguida, inicio um app Django chamado `api` no qual é encontrado a regra de negocio da api para a criação do db:
 
 `Pasta => api `
 - `admin.py` 
 - `models.py`
 
-Na pasta `core` encontramos os arquivo utilizado pelo Django Rest Framework onde exponho a api
+Na pasta `core` encontramos os arquivos utilizados pelo Django Rest Framework, exponho a api:
 
 `Pasta => api => core`
 - `serializers.py` 
