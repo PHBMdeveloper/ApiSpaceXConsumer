@@ -2,17 +2,17 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 
 from api.models import (
-    ProximoLancamento, 
-    UltimoLancamento, 
+    ProximoLancamento,
+    UltimoLancamento,
     ProximosLancamento,
-    LancamentosPassado )
+    LancamentosPassado)
 
 from .serializers import (
     ProximoLancamentoSerializer,
     UltimoLancamentoSerializer,
-    ProximosLancamentosSerializer, 
+    ProximosLancamentosSerializer,
     LancamentosPassadoSerializer
-    )
+)
 
 import urllib3
 import json
@@ -21,6 +21,7 @@ import json
 class ProximoLancamentoViewSet(viewsets.ModelViewSet):
     queryset = ProximoLancamento.objects.all()
     serializer_class = ProximoLancamentoSerializer
+    http_method_names = ['get', 'head']
 
     def list(self, request, *args, **kwargs):
         http = urllib3.PoolManager()
@@ -37,6 +38,7 @@ class ProximoLancamentoViewSet(viewsets.ModelViewSet):
 class UltimoLancamentoViewSet(viewsets.ModelViewSet):
     queryset = UltimoLancamento.objects.all()
     serializer_class = UltimoLancamentoSerializer
+    http_method_names = ['get', 'head']
 
     def list(self, request, *args, **kwargs):
         http = urllib3.PoolManager()
@@ -50,6 +52,7 @@ class UltimoLancamentoViewSet(viewsets.ModelViewSet):
 class ProximosLancamentoViewSet(viewsets.ModelViewSet):
     queryset = ProximosLancamento.objects.all()
     serializer_class = ProximosLancamentosSerializer
+    http_method_names = ['get', 'head']
 
     # def list(self, request, *args, **kwargs):
     #     http = urllib3.PoolManager()
@@ -59,7 +62,8 @@ class ProximosLancamentoViewSet(viewsets.ModelViewSet):
 
     #     return Response(j)
 
+
 class LancamentosPassadoViewSet(viewsets.ModelViewSet):
     queryset = LancamentosPassado.objects.all()
     serializer_class = LancamentosPassadoSerializer
-    
+    http_method_names = ['get', 'head']
