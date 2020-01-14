@@ -62,3 +62,4 @@ class ProximosLancamentoViewSet(viewsets.ModelViewSet):
 class LancamentosPassadoViewSet(viewsets.ModelViewSet):
     queryset = LancamentosPassado.objects.all()
     serializer_class = LancamentosPassadoSerializer
+    
