@@ -1,7 +1,6 @@
 <h1 align="center">
   Web browsable API <br> SpaceX Consumer
 </h1>
-<br>
 
 Elaborar uma API em Python/Django com front-end que consuma a API da SpaceX e seja capaz de apresentar as seguintes informações:
 
