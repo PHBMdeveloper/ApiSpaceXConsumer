@@ -31,6 +31,6 @@ router.register(r'proximoslancamentos', ProximosLancamentoViewSet)
 router.register(r'lancamentospassados', LancamentosPassadoViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('/', include(router.urls)),
     path('admin/', admin.site.urls),
 ]
