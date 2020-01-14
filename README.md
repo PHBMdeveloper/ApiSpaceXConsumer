@@ -10,7 +10,7 @@ Elaborar uma API em Python/Django com front-end que consuma a API da SpaceX e se
 - Lançamentos Passados
 
 ## 👨🏼‍💻 Deploy no Heroku
-**webapi**
+**Experimente o app no link abaixo.**
 
 [https://api-spacex-consumer.herokuapp.com/](https://api-spacex-consumer.herokuapp.com/)
 
