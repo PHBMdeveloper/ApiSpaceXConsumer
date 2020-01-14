@@ -41,6 +41,7 @@ Elaborar uma API em Python/Django com front-end que consuma a API da SpaceX e se
 ## 📚 Implementação
 
 O projeto Django chamado ApiSpaceXConsumer é o local onde ficam as configurações básicas do projeto:
+
 `Pasta => ApiSpaceXConsumer `
 - `urls.py`
 - `settings.py`
