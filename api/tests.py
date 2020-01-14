@@ -22,6 +22,7 @@ class ProximosLancamentoTestCase(TestCase):
         assert ProximosLancamento.objects.all().count() == 0
 
     def test_ProximoLancamento(self):
+        ''' Teste de quantidade origem e destino '''
         http = urllib3.PoolManager()
         r = http.request('GET', 'https://api.spacexdata.com/v3/launches/next')
         j = json.loads(r.data.decode('utf-8'))
@@ -30,6 +31,7 @@ class ProximosLancamentoTestCase(TestCase):
         return Response(j)
 
     def test_UltimoLancamento(self):
+        ''' Teste de quantidade origem e destino '''
         http = urllib3.PoolManager()
         r = http.request(
             'GET', 'https://api.spacexdata.com/v3/launches/latest')
@@ -39,6 +41,7 @@ class ProximosLancamentoTestCase(TestCase):
         return Response(j)
 
     def test_ProximosLancamentos(self):
+        ''' Teste de quantidade origem e destino '''
         http = urllib3.PoolManager()
         r = http.request(
             'GET', 'https://api.spacexdata.com/v3/launches/upcoming')
@@ -48,6 +51,7 @@ class ProximosLancamentoTestCase(TestCase):
         return Response(j)
 
     def test_LancamentosPassado(self):
+        ''' Teste de quantidade origem e destino '''
         http = urllib3.PoolManager()
         r = http.request(
             'GET', 'https://api.spacexdata.com/v3/launches/past')
