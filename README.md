@@ -38,6 +38,10 @@ Elaborar uma API em Python/Django com front-end que consuma a API da SpaceX e se
 8. Rode `python manage.py createsuperuser` escolha um nome de usuário e senha;
 7. Rode `python manage.py runserver` para subir o servidor de desenvolvimento;
 
+## 📚 Testes
+
+1. Rode `python manage.py test` para os testes.
+
 ## 📚 Implementação
 
 O projeto Django chamado ApiSpaceXConsumer é o local onde ficam as configurações básicas do projeto:
