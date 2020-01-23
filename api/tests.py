@@ -47,7 +47,7 @@ class ProximosLancamentoTestCase(TestCase):
             'GET', 'https://api.spacexdata.com/v3/launches/upcoming')
         j = json.loads(r.data.decode('utf-8'))
         print('ProximosLancamentos =', len(j))
-        assert len(j) == 16
+        assert len(j) == 15
         return Response(j)
 
     def test_LancamentosPassado(self):
@@ -57,5 +57,5 @@ class ProximosLancamentoTestCase(TestCase):
             'GET', 'https://api.spacexdata.com/v3/launches/past')
         j = json.loads(r.data.decode('utf-8'))
         print('LancamentosPassados =', len(j))
-        assert len(j) == 87
+        assert len(j) == 88
         return Response(j)
